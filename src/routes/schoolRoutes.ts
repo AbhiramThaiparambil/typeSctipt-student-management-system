@@ -29,7 +29,24 @@ router.post('/add-student', async (req, res) => {
       const students = await Student.find();
       res.render('students', { students });
     });
-     
+    
+
+    router.get('/teachers', async (req, res) => {
+        const teachers = await Teacher.find();
+        res.render('teachers', { teachers });
+      });
+      
+      router.post('/add-assignment', async (req, res) => {
+        const { title, dueDate } = req.body;
+        const assignment = new Assignment({ title, dueDate: new Date(dueDate) });
+        await assignment.save();
+        res.redirect('/assignments');
+      });
+      
+      router.get('/assignments', async (req, res) => {
+        const assignments = await Assignment.find();
+        res.render('assignments', { assignments });
+      });
     
     
   export default router;
