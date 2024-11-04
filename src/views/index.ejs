@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+</head>
+<body  background="https://images.pexels.com/photos/5088008/pexels-photo-5088008.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+    <!-- Header -->
+    <div class=" text-dark py-5 mb-5" >
+        <div class="container">
+            <h1 class="text-center  text-white" style="background-color: rgba(0, 0, 0, 0.362);">School Management System</h1>
+        </div>
+        <hr>
+    </div>
+
+    <div class="container ">
+        <div class="row g-4 " >
+            <!-- Students Form -->
+            <div class="col-md-4 " >
+                <div class="card shadow-sm h-100 bg-dark" style="border: 5px,solid,rgb(103, 101, 101);">
+                    <div class="card-header bg-dark text-white fw-bold">
+                        Add New Student
+                    </div>
+                    <div class="card-body">
+                        <form action="/add-student" method="POST">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="name" placeholder="Student Name" required />
+                            </div>
+                            <div class="mb-3">
+                                <input type="number" class="form-control" name="age" placeholder="Age" required />
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Add Student</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teachers Form -->
+            <div class="col-md-4">
+              <div class="card shadow-sm h-100 bg-dark" style="border: 5px,solid,rgb(103, 101, 101);">
+                                  <div class="card-header bg-dark text-white fw-bold">
+                                            Add New Teacher
+                    </div>
+                    <div class="card-body" >
+                        <form action="/add-teacher" method="POST">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="name" placeholder="Teacher Name" required />
+                            </div>
+                            <div class="mb-3">
+                                <input type="number" class="form-control" name="age" placeholder="Age" required />
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Add Teacher</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Assignments Form -->
+            <div class="col-md-4" >
+              <div class="card shadow-sm h-100 bg-dark" style="border: 5px,solid,rgb(103, 101, 101);">
+                                  <div class="card-header bg-dark text-white fw-bold">
+                                            Add New Assignment
+                    </div>
+                    <div class="card-body">
+                        <form action="/add-assignment" method="POST">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="title" placeholder="Assignment Title" required />
+                            </div>
+                            <div class="mb-3">
+                                <input type="date" class="form-control" name="dueDate" required />
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Add Assignment</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Cards -->
+        <div class="row g-4 mt-4">
+            <div class="col-md-4" >
+                <a href="/students" class="card shadow-sm text-center py-4 text-decoration-none text-white  h-100" style="background-color: rgba(0, 0, 0, 0.578); border: 5px,solid,rgb(103, 101, 101);">
+                    <div class="card-body">
+                        <h1 class="display-6 mb-3">👨‍🎓</h1>
+                        
+                        <button type="button" class="btn btn-primary">View Students</button>
+
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="/teachers" class="card shadow-sm text-center py-4 text-decoration-none text-dark h-100"  style="background-color: rgba(0, 0, 0, 0.578); border: 5px,solid,rgb(103, 101, 101);">
+                    <div class="card-body">
+                        <h1 class="display-6 mb-3">👨‍🏫</h1>
+                        
+                        <button type="button" class="btn btn-primary">View Teachers</button>
+
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="/assignments" class="card shadow-sm text-center py-4 text-decoration-none text-dark h-100"  style="background-color: rgba(0, 0, 0, 0.578); border: 5px,solid,rgb(103, 101, 101);">
+                    <div class="card-body">
+                        <h1 class="display-6 mb-3">📝</h1>
+                        <button type="button" class="btn btn-primary">View Assignments</button>
+
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add some bottom margin -->
+    <div class="mb-5"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

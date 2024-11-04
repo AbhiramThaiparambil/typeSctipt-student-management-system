@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignments List</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">  <style>
+    .assignment-card {
+      border-left: 5px solid #0d6efd;
+      transition: transform 0.2s ease-in-out;
+    }
+   
+    .assignment-due-date {
+      font-size: 0.9rem;
+      color: #6c757d;
+    }
+  </style>
+</head>
+ <body  background="https://images.pexels.com/photos/5088008/pexels-photo-5088008.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+  
+
+<div class="container my-5">
+  <h1 class="text-center mb-4 text-white" style="background-color: rgba(0, 0, 0, 0.442);">Assignments List</h1>
+  <div class="row g-3">
+    <% assignments.forEach(assignment => { %>
+      <div class="col-md-6">
+        <div class="card assignment-card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title"><%= assignment.title %></h5>
+            <p class="assignment-due-date">Due: <%= assignment.dueDate.toDateString() %></p>
+            <a href="#" class="btn btn-danger btn-sm mt-2">Delete</a>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+  <div class="text-center mt-5">
+    <a href="/" class="btn btn-secondary">Back</a>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
